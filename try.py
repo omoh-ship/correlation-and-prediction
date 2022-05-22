@@ -70,6 +70,8 @@ def correlation_operations(data_frame:pd.DataFrame, query_elem:str, query,
 
 
 app.layout = html.Div(children=[
+    dcc.Dropdown(id='sheet', value='Correlation Input Sheet', 
+        options=[{} for sheet in xls])
     dcc.Dropdown(id='year', value=2001, clearable=False,
         options=[{'label': year, 'value':year} for year in correlation_input_df['Period'].unique()]),
     dcc.Graph(id='graph', figure={})
