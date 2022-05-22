@@ -3,8 +3,8 @@ import numpy as np
 
 
 class ColumnFormatter:
-
-    def ___init__(self, column:pd.Series):
+    
+    def __init__(self, column:pd.Series):
         self.column = column
         # convert colum to a list
         self.column_to_list = self.column.to_list()
@@ -15,7 +15,7 @@ class ColumnFormatter:
         target_dict = {k: v for v, k in enumerated}
         return target_dict
     
-    def replace_column_values(self, target_map):
+    def replace_column_values(self, target_map:dict):
         """
         Replaces the values in the column with their corresponding target dictionary value
         Args:
