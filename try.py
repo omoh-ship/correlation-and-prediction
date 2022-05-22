@@ -11,6 +11,10 @@ xls = pd.ExcelFile("sample_data.xlsx")
 correlation_input_df = pd.read_excel(xls, 'Correlation Input Sheet')
 
 
+def get_excel_sheet():
+    pass
+
+
 def table_query(data_frame:pd.DataFrame, query_elem, query):
     """
     Queries the table using tje parameters passed in e.g, data_frame=correlation_input_df,query_elem='Period', query=2001. Therefore correlation_input_df['Period]

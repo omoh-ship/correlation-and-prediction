@@ -13,8 +13,9 @@ def table_query(data_frame:pd.DataFrame, query_elem, query):
     """
     Queries the table using tje parameters passed in e.g, data_frame=correlation_input_df,query_elem='Period', query=2001. Therefore correlation_input_df['Period]
     """
-    data_frame = data_frame.copy()
     query_result = data_frame[data_frame[query_elem] == query]
+    # make a copy of the slice of the dataframe that has the query
+    query_result = query_result.copy()
     return query_result
 
 

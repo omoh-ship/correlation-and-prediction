@@ -7,6 +7,7 @@ dash==2.4.1
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
+debugpy==1.6.0
 decorator==5.1.1
 entrypoints==0.4
 et-xmlfile==1.1.0
@@ -14,6 +15,8 @@ executing==0.8.3
 Flask==2.1.2
 Flask-Compress==1.12
 importlib-metadata==4.11.4
+ipykernel==6.13.0
+ipython==8.3.0
 itsdangerous==2.1.2
 jedi==0.18.1
 Jinja2==3.1.2
