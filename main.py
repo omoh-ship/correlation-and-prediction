@@ -16,18 +16,18 @@ def table_query(data_frame:pd.DataFrame, query_elem, query):
     query_result = data_frame[data_frame[query_elem] == query]
     # make a copy of the slice of the dataframe that has the query
     query_result = query_result.copy()
-    return query_result
+    yield query_result
 
 
 def analysis_prep(data_frame:pd.DataFrame, column_names:list):
     """Drop columns that you don't want in your analysis since they probably don't aid it"""
     analysis_prepped_df = data_frame.drop(column_names, axis=1)
-    return analysis_prepped_df
+    yield analysis_prepped_df
 
 
 def reshape_table(data_frame:pd.DataFrame, new_columns:str, new_index:str, new_values:str):
     reshaped_table = data_frame.pivot(index=new_index, columns=new_columns, values=new_values)
-    return reshaped_table
+    yield reshaped_table
 
 
 def correlation_operations(data_frame:pd.DataFrame, query_elem:str, query, 
