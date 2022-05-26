@@ -1,8 +1,5 @@
-import plotly.express as px
 import pandas as pd
 from column_formatter import ColumnFormatter
-from dash import dcc, Dash, html
-from dash.dependencies import Input, Output
 
 xls = pd.ExcelFile("sample_data.xlsx")
 
@@ -11,7 +8,7 @@ correlation_input_df = pd.read_excel(xls, 'Correlation Input Sheet')
 
 def table_query(data_frame:pd.DataFrame, query_elem, query):
     """
-    Queries the table using tje parameters passed in e.g, data_frame=correlation_input_df,query_elem='Period', query=2001. Therefore correlation_input_df['Period]
+    Queries the table using the parameters passed in e.g, data_frame=correlation_input_df,query_elem='Period', query=2001. Therefore correlation_input_df['Period]
     """
     query_result = data_frame[data_frame[query_elem] == query]
     # make a copy of the slice of the dataframe that has the query
@@ -44,10 +41,14 @@ def correlation_operations(data_frame:pd.DataFrame, query_elem:str, query,
     """
     # Query table
     filter_table = table_query(data_frame=data_frame, query_elem=query_elem, query=query)
-    print(f"Table successfully filtered with query:{query}\n\n")
+    result = [item for item in filter_table]
+    result = pd.concat(result)
+    print(f"Table successfully filtered with query:{result}\n\n")
 
     # drop useless columns
-    refined_df = analysis_prep(data_frame=filter_table, column_names=columns_to_drop)
+    refined_df = analysis_prep(data_frame=result, column_names=columns_to_drop)
+    refined_result = [item for item in refined_df]
+    refined_df = pd.concat(refined_result)
     print(f"Table successfully dropped columns not needed\n{refined_df}\n\n")
 
     #enumerate items in the desired new index column
@@ -60,6 +61,8 @@ def correlation_operations(data_frame:pd.DataFrame, query_elem:str, query,
 
     # reshape the table
     reshaped_table = reshape_table(data_frame=refined_df, new_columns=new_columns, new_index=new_index_column, new_values=new_values)
+    result = [item for item in reshaped_table]
+    reshaped_table = pd.concat(result)
 
     # fill NaN values with 0
     reshaped_table = reshaped_table.fillna(0)
@@ -75,8 +78,4 @@ correlation_operations(data_frame=correlation_input_df,
                         new_index_column='State',
                         new_columns='Indicator',
                         new_values='Value')
-# new = correlation_input_df[correlation_input_df['Period'] == 2001]
-# print(new)
-# correlation_input_df.copy
-
 
