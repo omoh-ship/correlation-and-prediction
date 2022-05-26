@@ -44,6 +44,7 @@ class DataFrameFormatter:
             new_values: the new values you'd like the dataframe to have
         """
         reshaped_table = data_frame.pivot(index=new_index, columns=new_columns, values=new_values)
+        print(reshaped_table)
         yield reshaped_table
 
 
