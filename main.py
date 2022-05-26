@@ -1,7 +1,7 @@
 import pandas as pd
 from column_formatter import ColumnFormatter
 
-xls = pd.ExcelFile("sample_data.xlsx")
+xls = pd.ExcelFile("data/sample_data.xlsx")
 
 correlation_input_df = pd.read_excel(xls, 'Correlation Input Sheet')
 
@@ -30,6 +30,7 @@ def reshape_table(data_frame:pd.DataFrame, new_columns:str, new_index:str, new_v
 def correlation_operations(data_frame:pd.DataFrame, query_elem:str, query, 
                             columns_to_drop:list, new_index_column:str, new_columns:str, new_values:str):
     """
+    This function will work perfectly with the correlation input sheet but hasn't been abstracted to work with the other sheets yet.
     Args:
         data_frame: data frame to be worked on
         query_elem: name of the column in the dataframe that you'll use to filter the dataframe
@@ -43,18 +44,18 @@ def correlation_operations(data_frame:pd.DataFrame, query_elem:str, query,
     filter_table = table_query(data_frame=data_frame, query_elem=query_elem, query=query)
     result = [item for item in filter_table]
     result = pd.concat(result)
-    print(f"Table successfully filtered with query:{result}\n\n")
+    # print(f"Table successfully filtered with query:{result}\n\n")
 
     # drop useless columns
     refined_df = analysis_prep(data_frame=result, column_names=columns_to_drop)
     refined_result = [item for item in refined_df]
     refined_df = pd.concat(refined_result)
-    print(f"Table successfully dropped columns not needed\n{refined_df}\n\n")
+    # print(f"Table successfully dropped columns not needed\n{refined_df}\n\n")
 
     #enumerate items in the desired new index column
     column_formatter = ColumnFormatter(refined_df[new_index_column])
     target_map = column_formatter.enumerate_column()
-    print(f"New index column successfully enumerated\n\n")
+    # print(f"New index column successfully enumerated\n\n")
 
     # replace current values in the column with their maped enumerated equivalent(it prints a confirmation message if successful)
     column_formatter.replace_column_values(target_map=target_map)
@@ -68,14 +69,6 @@ def correlation_operations(data_frame:pd.DataFrame, query_elem:str, query,
     reshaped_table = reshaped_table.fillna(0)
 
     reshaped_corr = reshaped_table.corr()
-    print(reshaped_corr)
-
-
-correlation_operations(data_frame=correlation_input_df, 
-                        query_elem='Period',
-                        query=2001,
-                        columns_to_drop=['Source', 'Period', 'LGA'],
-                        new_index_column='State',
-                        new_columns='Indicator',
-                        new_values='Value')
+    return reshaped_corr
+    # print(reshaped_corr)
 
