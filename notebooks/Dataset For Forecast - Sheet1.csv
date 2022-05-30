@@ -1,0 +1,390 @@
+Indicator,Period,State,LGA,Source,Value
+Adolescent birth rate,1990,National,All,World Bank,148.0054
+Adolescent birth rate,1991,National,All,World Bank,145.7192
+Adolescent birth rate,1992,National,All,World Bank,143.433
+Adolescent birth rate,1993,National,All,World Bank,142.0736
+Adolescent birth rate,1994,National,All,World Bank,140.7142
+Adolescent birth rate,1995,National,All,World Bank,139.3548
+Adolescent birth rate,1996,National,All,World Bank,137.9954
+Adolescent birth rate,1997,National,All,World Bank,136.636
+Adolescent birth rate,1998,National,All,World Bank,135.3652
+Adolescent birth rate,1999,National,All,World Bank,134.0944
+Adolescent birth rate,2000,National,All,World Bank,132.8236
+Adolescent birth rate,2001,National,All,World Bank,131.5528
+Adolescent birth rate,2002,National,All,World Bank,130.282
+Adolescent birth rate,2003,National,All,World Bank,128.8608
+Adolescent birth rate,2004,National,All,World Bank,127.4396
+Adolescent birth rate,2005,National,All,World Bank,126.0184
+Adolescent birth rate,2006,National,All,World Bank,124.5972
+Adolescent birth rate,2007,National,All,World Bank,123.176
+Adolescent birth rate,2008,National,All,World Bank,121.9508
+Adolescent birth rate,2009,National,All,World Bank,120.7256
+Adolescent birth rate,2010,National,All,World Bank,119.5004
+Adolescent birth rate,2011,National,All,World Bank,118.2752
+Adolescent birth rate,2012,National,All,World Bank,117.05
+Adolescent birth rate,2013,National,All,World Bank,115.106
+Adolescent birth rate,2014,National,All,World Bank,113.162
+Adolescent birth rate,2015,National,All,World Bank,111.218
+Adolescent birth rate,2016,National,All,World Bank,109.274
+Adolescent birth rate,2017,National,All,World Bank,107.33
+Adolescent birth rate,2018,National,All,World Bank,105.447
+Adolescent birth rate,2019,National,All,World Bank,103.564
+ANC Coverage (4 visits),1990,National,All,World Bank,56.5
+ANC Coverage (4 visits),1999,National,All,World Bank,63.6
+ANC Coverage (4 visits),2000,National,All,World Bank,47.3
+ANC Coverage (4 visits),2003,National,All,World Bank,58
+ANC Coverage (4 visits),2008,National,All,World Bank,57.7
+ANC Coverage (4 visits),2010,National,All,World Bank,54.1
+ANC Coverage (4 visits),2011,National,All,World Bank,66.2
+ANC Coverage (4 visits),2013,National,All,World Bank,60.6
+ANC Coverage (4 visits),2015,National,All,World Bank,62.6
+ANC Coverage (4 visits),2017,National,All,World Bank,65.8
+ANC Coverage (4 visits),2018,National,All,World Bank,67
+ANC Coverage (at least 1 visit),1990,National,All,World Bank,56.5
+ANC Coverage (at least 1 visit),1999,National,All,World Bank,63.6
+ANC Coverage (at least 1 visit),2003,National,All,World Bank,58
+ANC Coverage (at least 1 visit),2008,National,All,World Bank,57.7
+ANC Coverage (at least 1 visit),2010,National,All,World Bank,54.1
+ANC Coverage (at least 1 visit),2011,National,All,World Bank,66.2
+ANC Coverage (at least 1 visit),2013,National,All,World Bank,60.6
+ANC Coverage (at least 1 visit),2015,National,All,World Bank,62.6
+ANC Coverage (at least 1 visit),2017,National,All,World Bank,65.8
+ANC Coverage (at least 1 visit),2018,National,All,World Bank,67
+Contraceptive prevalence rate,1990,National,All,World Bank,6
+Contraceptive prevalence rate,1994,National,All,World Bank,13.4
+Contraceptive prevalence rate,1999,National,All,World Bank,15.3
+Contraceptive prevalence rate,2003,National,All,World Bank,12.6
+Contraceptive prevalence rate,2007,National,All,World Bank,14.7
+Contraceptive prevalence rate,2008,National,All,World Bank,14.6
+Contraceptive prevalence rate,2011,National,All,World Bank,17.5
+Contraceptive prevalence rate,2012,National,All,World Bank,13.5
+Contraceptive prevalence rate,2013,National,All,World Bank,15.1
+Contraceptive prevalence rate,2016,National,All,World Bank,20.4
+Contraceptive prevalence rate,2017,National,All,World Bank,13.4
+Contraceptive prevalence rate,2018,National,All,World Bank,16.6
+DPT 3/Penta 3 coverage rate,1990,National,All,World Bank,56
+DPT 3/Penta 3 coverage rate,1991,National,All,World Bank,39
+DPT 3/Penta 3 coverage rate,1992,National,All,World Bank,43
+DPT 3/Penta 3 coverage rate,1993,National,All,World Bank,29
+DPT 3/Penta 3 coverage rate,1994,National,All,World Bank,44
+DPT 3/Penta 3 coverage rate,1995,National,All,World Bank,34
+DPT 3/Penta 3 coverage rate,1996,National,All,World Bank,26
+DPT 3/Penta 3 coverage rate,1997,National,All,World Bank,21
+DPT 3/Penta 3 coverage rate,1998,National,All,World Bank,32
+DPT 3/Penta 3 coverage rate,1999,National,All,World Bank,31
+DPT 3/Penta 3 coverage rate,2000,National,All,World Bank,29
+DPT 3/Penta 3 coverage rate,2001,National,All,World Bank,27
+DPT 3/Penta 3 coverage rate,2002,National,All,World Bank,25
+DPT 3/Penta 3 coverage rate,2003,National,All,World Bank,29
+DPT 3/Penta 3 coverage rate,2004,National,All,World Bank,33
+DPT 3/Penta 3 coverage rate,2005,National,All,World Bank,36
+DPT 3/Penta 3 coverage rate,2006,National,All,World Bank,40
+DPT 3/Penta 3 coverage rate,2007,National,All,World Bank,42
+DPT 3/Penta 3 coverage rate,2008,National,All,World Bank,53
+DPT 3/Penta 3 coverage rate,2009,National,All,World Bank,63
+DPT 3/Penta 3 coverage rate,2010,National,All,World Bank,54
+DPT 3/Penta 3 coverage rate,2011,National,All,World Bank,48
+DPT 3/Penta 3 coverage rate,2012,National,All,World Bank,42
+DPT 3/Penta 3 coverage rate,2013,National,All,World Bank,43
+DPT 3/Penta 3 coverage rate,2014,National,All,World Bank,43
+DPT 3/Penta 3 coverage rate,2015,National,All,World Bank,42
+DPT 3/Penta 3 coverage rate,2016,National,All,World Bank,53
+DPT 3/Penta 3 coverage rate,2017,National,All,World Bank,55
+DPT 3/Penta 3 coverage rate,2018,National,All,World Bank,56
+DPT 3/Penta 3 coverage rate,2019,National,All,World Bank,57
+Infant Mortality rate,1990,National,All,World Bank,124.3
+Infant Mortality rate,1991,National,All,World Bank,124
+Infant Mortality rate,1992,National,All,World Bank,123.7
+Infant Mortality rate,1993,National,All,World Bank,123.1
+Infant Mortality rate,1994,National,All,World Bank,122.4
+Infant Mortality rate,1995,National,All,World Bank,121.3
+Infant Mortality rate,1996,National,All,World Bank,119.8
+Infant Mortality rate,1997,National,All,World Bank,117.9
+Infant Mortality rate,1998,National,All,World Bank,115.5
+Infant Mortality rate,1999,National,All,World Bank,112.8
+Infant Mortality rate,2000,National,All,World Bank,110
+Infant Mortality rate,2001,National,All,World Bank,107
+Infant Mortality rate,2002,National,All,World Bank,104
+Infant Mortality rate,2003,National,All,World Bank,101
+Infant Mortality rate,2004,National,All,World Bank,98.1
+Infant Mortality rate,2005,National,All,World Bank,95.2
+Infant Mortality rate,2006,National,All,World Bank,92.5
+Infant Mortality rate,2007,National,All,World Bank,90.1
+Infant Mortality rate,2008,National,All,World Bank,88
+Infant Mortality rate,2009,National,All,World Bank,86.1
+Infant Mortality rate,2010,National,All,World Bank,84.6
+Infant Mortality rate,2011,National,All,World Bank,83.3
+Infant Mortality rate,2012,National,All,World Bank,82.2
+Infant Mortality rate,2013,National,All,World Bank,81.2
+Infant Mortality rate,2014,National,All,World Bank,80.4
+Infant Mortality rate,2015,National,All,World Bank,79.5
+Infant Mortality rate,2016,National,All,World Bank,78.5
+Infant Mortality rate,2017,National,All,World Bank,77.3
+Infant Mortality rate,2018,National,All,World Bank,75.7
+Infant Mortality rate,2019,National,All,World Bank,74.2
+Maternal Mortality Ratio,2000,National,All,World Bank,1200
+Maternal Mortality Ratio,2001,National,All,World Bank,1200
+Maternal Mortality Ratio,2002,National,All,World Bank,1180
+Maternal Mortality Ratio,2003,National,All,World Bank,1170
+Maternal Mortality Ratio,2004,National,All,World Bank,1130
+Maternal Mortality Ratio,2005,National,All,World Bank,1080
+Maternal Mortality Ratio,2006,National,All,World Bank,1040
+Maternal Mortality Ratio,2007,National,All,World Bank,1010
+Maternal Mortality Ratio,2008,National,All,World Bank,996
+Maternal Mortality Ratio,2009,National,All,World Bank,987
+Maternal Mortality Ratio,2010,National,All,World Bank,978
+Maternal Mortality Ratio,2011,National,All,World Bank,972
+Maternal Mortality Ratio,2012,National,All,World Bank,963
+Maternal Mortality Ratio,2013,National,All,World Bank,951
+Maternal Mortality Ratio,2014,National,All,World Bank,943
+Maternal Mortality Ratio,2015,National,All,World Bank,931
+Maternal Mortality Ratio,2016,National,All,World Bank,925
+Maternal Mortality Ratio,2017,National,All,World Bank,917
+Measles Immunization Coverage,1990,National,All,World Bank,54
+Measles Immunization Coverage,1991,National,All,World Bank,57
+Measles Immunization Coverage,1992,National,All,World Bank,43
+Measles Immunization Coverage,1993,National,All,World Bank,40
+Measles Immunization Coverage,1994,National,All,World Bank,41
+Measles Immunization Coverage,1995,National,All,World Bank,44
+Measles Immunization Coverage,1996,National,All,World Bank,38
+Measles Immunization Coverage,1997,National,All,World Bank,38
+Measles Immunization Coverage,1998,National,All,World Bank,38
+Measles Immunization Coverage,1999,National,All,World Bank,35
+Measles Immunization Coverage,2000,National,All,World Bank,33
+Measles Immunization Coverage,2001,National,All,World Bank,32
+Measles Immunization Coverage,2002,National,All,World Bank,30
+Measles Immunization Coverage,2003,National,All,World Bank,34
+Measles Immunization Coverage,2004,National,All,World Bank,37
+Measles Immunization Coverage,2005,National,All,World Bank,41
+Measles Immunization Coverage,2006,National,All,World Bank,44
+Measles Immunization Coverage,2007,National,All,World Bank,41
+Measles Immunization Coverage,2008,National,All,World Bank,53
+Measles Immunization Coverage,2009,National,All,World Bank,64
+Measles Immunization Coverage,2010,National,All,World Bank,56
+Measles Immunization Coverage,2011,National,All,World Bank,49
+Measles Immunization Coverage,2012,National,All,World Bank,42
+Measles Immunization Coverage,2013,National,All,World Bank,43
+Measles Immunization Coverage,2014,National,All,World Bank,44
+Measles Immunization Coverage,2015,National,All,World Bank,42
+Measles Immunization Coverage,2016,National,All,World Bank,51
+Measles Immunization Coverage,2017,National,All,World Bank,54
+Measles Immunization Coverage,2018,National,All,World Bank,54
+Measles Immunization Coverage,2019,National,All,World Bank,54
+Neonatal mortality rate (per 1000 live births),1990,National,All,World Bank,49.7
+Neonatal mortality rate (per 1000 live births),1991,National,All,World Bank,49.7
+Neonatal mortality rate (per 1000 live births),1992,National,All,World Bank,49.8
+Neonatal mortality rate (per 1000 live births),1993,National,All,World Bank,49.8
+Neonatal mortality rate (per 1000 live births),1994,National,All,World Bank,49.8
+Neonatal mortality rate (per 1000 live births),1995,National,All,World Bank,49.6
+Neonatal mortality rate (per 1000 live births),1996,National,All,World Bank,49.3
+Neonatal mortality rate (per 1000 live births),1997,National,All,World Bank,48.8
+Neonatal mortality rate (per 1000 live births),1998,National,All,World Bank,48.1
+Neonatal mortality rate (per 1000 live births),1999,National,All,World Bank,47.3
+Neonatal mortality rate (per 1000 live births),2000,National,All,World Bank,46.3
+Neonatal mortality rate (per 1000 live births),2001,National,All,World Bank,45.2
+Neonatal mortality rate (per 1000 live births),2002,National,All,World Bank,44
+Neonatal mortality rate (per 1000 live births),2003,National,All,World Bank,42.8
+Neonatal mortality rate (per 1000 live births),2004,National,All,World Bank,41.7
+Neonatal mortality rate (per 1000 live births),2005,National,All,World Bank,40.7
+Neonatal mortality rate (per 1000 live births),2006,National,All,World Bank,39.9
+Neonatal mortality rate (per 1000 live births),2007,National,All,World Bank,39.2
+Neonatal mortality rate (per 1000 live births),2008,National,All,World Bank,38.6
+Neonatal mortality rate (per 1000 live births),2009,National,All,World Bank,38.3
+Neonatal mortality rate (per 1000 live births),2010,National,All,World Bank,38
+Neonatal mortality rate (per 1000 live births),2011,National,All,World Bank,37.7
+Neonatal mortality rate (per 1000 live births),2012,National,All,World Bank,37.6
+Neonatal mortality rate (per 1000 live births),2013,National,All,World Bank,37.4
+Neonatal mortality rate (per 1000 live births),2014,National,All,World Bank,37.3
+Neonatal mortality rate (per 1000 live births),2015,National,All,World Bank,37.1
+Neonatal mortality rate (per 1000 live births),2016,National,All,World Bank,36.9
+Neonatal mortality rate (per 1000 live births),2017,National,All,World Bank,36.7
+Neonatal mortality rate (per 1000 live births),2018,National,All,World Bank,36.3
+Neonatal mortality rate (per 1000 live births),2019,National,All,World Bank,35.9
+Percentage of children under 6 months who were exclusively breastfed,1990,National,All,World Bank,1.7
+Percentage of children under 6 months who were exclusively breastfed,2000,National,All,World Bank,15.4
+Percentage of children under 6 months who were exclusively breastfed,2003,National,All,World Bank,15.6
+Percentage of children under 6 months who were exclusively breastfed,2007,National,All,World Bank,11.5
+Percentage of children under 6 months who were exclusively breastfed,2008,National,All,World Bank,12.5
+Percentage of children under 6 months who were exclusively breastfed,2011,National,All,World Bank,14.7
+Percentage of children under 6 months who were exclusively breastfed,2013,National,All,World Bank,16.9
+Percentage of children under 6 months who were exclusively breastfed,2017,National,All,World Bank,23.3
+Percentage of children under 6 months who were exclusively breastfed,2018,National,All,World Bank,28.7
+Percentage of children with diarrhoea who received treatment,1990,National,All,World Bank,11.7
+Percentage of children with diarrhoea who received treatment,1999,National,All,World Bank,34.3
+Percentage of children with diarrhoea who received treatment,2003,National,All,World Bank,18.2
+Percentage of children with diarrhoea who received treatment,2008,National,All,World Bank,25.5
+Percentage of children with diarrhoea who received treatment,2011,National,All,World Bank,26
+Percentage of children with diarrhoea who received treatment,2013,National,All,World Bank,33.7
+Percentage of children with diarrhoea who received treatment,2017,National,All,World Bank,36.8
+Percentage of children with diarrhoea who received treatment,2018,National,All,World Bank,40
+Percentage of women age 15-49 years who received at least two or more IPT doses during pregnancy,2003,National,All,World Bank,1
+Percentage of women age 15-49 years who received at least two or more IPT doses during pregnancy,2008,National,All,World Bank,4.9
+Percentage of women age 15-49 years who received at least two or more IPT doses during pregnancy,2010,National,All,World Bank,13.2
+Percentage of women age 15-49 years who received at least two or more IPT doses during pregnancy,2011,National,All,World Bank,19.5
+Percentage of women age 15-49 years who received at least two or more IPT doses during pregnancy,2013,National,All,World Bank,14.6
+Percentage of women age 15-49 years who received at least two or more IPT doses during pregnancy,2015,National,All,World Bank,37.2
+Postnatal care coverage (mother),2008,National,All,World Bank,29.5
+Postnatal care coverage (mother),2013,National,All,World Bank,39.6
+Postnatal care coverage (mother),2018,National,All,World Bank,41.8
+Prevalence of HIV,1990,National,All,World Bank,0.5
+Prevalence of HIV,1991,National,All,World Bank,0.6
+Prevalence of HIV,1992,National,All,World Bank,0.7
+Prevalence of HIV,1993,National,All,World Bank,0.8
+Prevalence of HIV,1994,National,All,World Bank,0.9
+Prevalence of HIV,1995,National,All,World Bank,1
+Prevalence of HIV,1996,National,All,World Bank,1.1
+Prevalence of HIV,1997,National,All,World Bank,1.2
+Prevalence of HIV,1998,National,All,World Bank,1.2
+Prevalence of HIV,1999,National,All,World Bank,1.3
+Prevalence of HIV,2000,National,All,World Bank,1.3
+Prevalence of HIV,2001,National,All,World Bank,1.3
+Prevalence of HIV,2002,National,All,World Bank,1.4
+Prevalence of HIV,2003,National,All,World Bank,1.4
+Prevalence of HIV,2004,National,All,World Bank,1.3
+Prevalence of HIV,2005,National,All,World Bank,1.3
+Prevalence of HIV,2006,National,All,World Bank,1.3
+Prevalence of HIV,2007,National,All,World Bank,1.3
+Prevalence of HIV,2008,National,All,World Bank,1.3
+Prevalence of HIV,2009,National,All,World Bank,1.3
+Prevalence of HIV,2010,National,All,World Bank,1.3
+Prevalence of HIV,2011,National,All,World Bank,1.3
+Prevalence of HIV,2012,National,All,World Bank,1.3
+Prevalence of HIV,2013,National,All,World Bank,1.3
+Prevalence of HIV,2014,National,All,World Bank,1.3
+Prevalence of HIV,2015,National,All,World Bank,1.3
+Prevalence of HIV,2016,National,All,World Bank,1.3
+Prevalence of HIV,2017,National,All,World Bank,1.3
+Prevalence of HIV,2018,National,All,World Bank,1.3
+Prevalence of HIV,2019,National,All,World Bank,1.3
+Prevalence of stunting among under 5 children,1990,National,All,World Bank,48.7
+Prevalence of stunting among under 5 children,1993,National,All,World Bank,43.8
+Prevalence of stunting among under 5 children,2003,National,All,World Bank,42.5
+Prevalence of stunting among under 5 children,2007,National,All,World Bank,39.2
+Prevalence of stunting among under 5 children,2008,National,All,World Bank,40.6
+Prevalence of stunting among under 5 children,2011,National,All,World Bank,35.8
+Prevalence of stunting among under 5 children,2013,National,All,World Bank,36.5
+Prevalence of stunting among under 5 children,2014,National,All,World Bank,33.6
+Prevalence of stunting among under 5 children,2015,National,All,World Bank,33
+Prevalence of stunting among under 5 children,2016,National,All,World Bank,43.6
+Prevalence of stunting among under 5 children,2018,National,All,World Bank,36.8
+Prevalence of wasting among under 5 children,1990,National,All,World Bank,11.7
+Prevalence of wasting among under 5 children,1993,National,All,World Bank,20.6
+Prevalence of wasting among under 5 children,2003,National,All,World Bank,11.2
+Prevalence of wasting among under 5 children,2007,National,All,World Bank,13.4
+Prevalence of wasting among under 5 children,2008,National,All,World Bank,14.5
+Prevalence of wasting among under 5 children,2011,National,All,World Bank,10.2
+Prevalence of wasting among under 5 children,2013,National,All,World Bank,18.1
+Prevalence of wasting among under 5 children,2014,National,All,World Bank,7.9
+Prevalence of wasting among under 5 children,2015,National,All,World Bank,7.3
+Prevalence of wasting among under 5 children,2016,National,All,World Bank,10.8
+Prevalence of wasting among under 5 children,2018,National,All,World Bank,6.8
+Prevalence of wasting among under 5 children,2020,National,All,World Bank,6.5
+Skilled attendance at delivery or birth,1990,National,All,World Bank,30.8
+Skilled attendance at delivery or birth,1999,National,All,World Bank,41.6
+Skilled attendance at delivery or birth,2003,National,All,World Bank,35.2
+Skilled attendance at delivery or birth,2008,National,All,World Bank,34.4
+Skilled attendance at delivery or birth,2011,National,All,World Bank,47.3
+Skilled attendance at delivery or birth,2013,National,All,World Bank,35.2
+Skilled attendance at delivery or birth,2017,National,All,World Bank,43
+Skilled attendance at delivery or birth,2018,National,All,World Bank,43.3
+Total fertility rate,1990,National,All,World Bank,6.49
+Total fertility rate,1991,National,All,World Bank,6.443
+Total fertility rate,1992,National,All,World Bank,6.395
+Total fertility rate,1993,National,All,World Bank,6.348
+Total fertility rate,1994,National,All,World Bank,6.303
+Total fertility rate,1995,National,All,World Bank,6.262
+Total fertility rate,1996,National,All,World Bank,6.224
+Total fertility rate,1997,National,All,World Bank,6.19
+Total fertility rate,1998,National,All,World Bank,6.159
+Total fertility rate,1999,National,All,World Bank,6.131
+Total fertility rate,2000,National,All,World Bank,6.106
+Total fertility rate,2001,National,All,World Bank,6.083
+Total fertility rate,2002,National,All,World Bank,6.06
+Total fertility rate,2003,National,All,World Bank,6.036
+Total fertility rate,2004,National,All,World Bank,6.011
+Total fertility rate,2005,National,All,World Bank,5.985
+Total fertility rate,2006,National,All,World Bank,5.958
+Total fertility rate,2007,National,All,World Bank,5.93
+Total fertility rate,2008,National,All,World Bank,5.902
+Total fertility rate,2009,National,All,World Bank,5.872
+Total fertility rate,2010,National,All,World Bank,5.839
+Total fertility rate,2011,National,All,World Bank,5.802
+Total fertility rate,2012,National,All,World Bank,5.758
+Total fertility rate,2013,National,All,World Bank,5.709
+Total fertility rate,2014,National,All,World Bank,5.653
+Total fertility rate,2015,National,All,World Bank,5.592
+Total fertility rate,2016,National,All,World Bank,5.526
+Total fertility rate,2017,National,All,World Bank,5.457
+Total fertility rate,2018,National,All,World Bank,5.387
+Total fertility rate,2019,National,All,World Bank,5.317
+Under 5 Mortality rate,1990,National,All,World Bank,209.5
+Under 5 Mortality rate,1991,National,All,World Bank,209
+Under 5 Mortality rate,1992,National,All,World Bank,208.3
+Under 5 Mortality rate,1993,National,All,World Bank,207.4
+Under 5 Mortality rate,1994,National,All,World Bank,206.1
+Under 5 Mortality rate,1995,National,All,World Bank,204.1
+Under 5 Mortality rate,1996,National,All,World Bank,201.4
+Under 5 Mortality rate,1997,National,All,World Bank,197.8
+Under 5 Mortality rate,1998,National,All,World Bank,193.5
+Under 5 Mortality rate,1999,National,All,World Bank,188.5
+Under 5 Mortality rate,2000,National,All,World Bank,183.1
+Under 5 Mortality rate,2001,National,All,World Bank,177.7
+Under 5 Mortality rate,2002,National,All,World Bank,172
+Under 5 Mortality rate,2003,National,All,World Bank,166.4
+Under 5 Mortality rate,2004,National,All,World Bank,160.8
+Under 5 Mortality rate,2005,National,All,World Bank,155.5
+Under 5 Mortality rate,2006,National,All,World Bank,150.6
+Under 5 Mortality rate,2007,National,All,World Bank,146
+Under 5 Mortality rate,2008,National,All,World Bank,142.2
+Under 5 Mortality rate,2009,National,All,World Bank,138.8
+Under 5 Mortality rate,2010,National,All,World Bank,136
+Under 5 Mortality rate,2011,National,All,World Bank,133.6
+Under 5 Mortality rate,2012,National,All,World Bank,131.7
+Under 5 Mortality rate,2013,National,All,World Bank,129.9
+Under 5 Mortality rate,2014,National,All,World Bank,128.5
+Under 5 Mortality rate,2015,National,All,World Bank,126.8
+Under 5 Mortality rate,2016,National,All,World Bank,125
+Under 5 Mortality rate,2017,National,All,World Bank,122.8
+Under 5 Mortality rate,2018,National,All,World Bank,120
+Under 5 Mortality rate,2019,National,All,World Bank,117.2
+Underweight prevalence among under 5 children,1990,National,All,World Bank,33.1
+Underweight prevalence among under 5 children,1993,National,All,World Bank,35.1
+Underweight prevalence among under 5 children,2003,National,All,World Bank,26.7
+Underweight prevalence among under 5 children,2007,National,All,World Bank,23.3
+Underweight prevalence among under 5 children,2008,National,All,World Bank,26.7
+Underweight prevalence among under 5 children,2011,National,All,World Bank,24.2
+Underweight prevalence among under 5 children,2013,National,All,World Bank,31
+Underweight prevalence among under 5 children,2014,National,All,World Bank,20.6
+Underweight prevalence among under 5 children,2015,National,All,World Bank,19.5
+Underweight prevalence among under 5 children,2016,National,All,World Bank,31.5
+Underweight prevalence among under 5 children,2018,National,All,World Bank,21.8
+Underweight prevalence among under 5 children,2020,National,All,World Bank,18.4
+Unmet need for family planning,1990,National,All,World Bank,21.5
+Unmet need for family planning,1999,National,All,World Bank,20
+Unmet need for family planning,2003,National,All,World Bank,17.5
+Unmet need for family planning,2008,National,All,World Bank,20.2
+Unmet need for family planning,2011,National,All,World Bank,19.4
+Unmet need for family planning,2013,National,All,World Bank,16.1
+Unmet need for family planning,2016,National,All,World Bank,28.9
+Unmet need for family planning,2017,National,All,World Bank,27.6
+Unmet need for family planning,2018,National,All,World Bank,18.9
+Vitamin A supplementation coverage,1999,National,All,World Bank,23
+Vitamin A supplementation coverage,2000,National,All,World Bank,0
+Vitamin A supplementation coverage,2001,National,All,World Bank,64
+Vitamin A supplementation coverage,2002,National,All,World Bank,31
+Vitamin A supplementation coverage,2003,National,All,World Bank,0
+Vitamin A supplementation coverage,2004,National,All,World Bank,76
+Vitamin A supplementation coverage,2005,National,All,World Bank,40
+Vitamin A supplementation coverage,2006,National,All,World Bank,61
+Vitamin A supplementation coverage,2007,National,All,World Bank,55
+Vitamin A supplementation coverage,2008,National,All,World Bank,0
+Vitamin A supplementation coverage,2009,National,All,World Bank,78
+Vitamin A supplementation coverage,2010,National,All,World Bank,91
+Vitamin A supplementation coverage,2011,National,All,World Bank,73
+Vitamin A supplementation coverage,2012,National,All,World Bank,78
+Vitamin A supplementation coverage,2013,National,All,World Bank,70
+Vitamin A supplementation coverage,2014,National,All,World Bank,80
+Vitamin A supplementation coverage,2015,National,All,World Bank,76
+Vitamin A supplementation coverage,2016,National,All,World Bank,56
+Vitamin A supplementation coverage,2017,National,All,World Bank,83
+Vitamin A supplementation coverage,2018,National,All,World Bank,80

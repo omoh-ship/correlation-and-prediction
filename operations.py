@@ -61,6 +61,14 @@ def correlation_operations(table:pd.DataFrame, query_element:str,
     reshaped_table = reshaped_table.fillna(0)
 
     reshaped_corr = reshaped_table.corr()
+    # print(reshaped_corr.to_dict())
     return reshaped_corr
     
 
+# correlation_operations(table=correlation_input_df, 
+#                         query_element='Period',
+#                         query_value=2001,
+#                         columns_to_drop=['Source', 'Period', 'LGA'],
+#                         new_index_column='State',
+#                         new_columns='Indicator',
+#                         new_values='Value')

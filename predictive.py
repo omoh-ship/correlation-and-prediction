@@ -1,7 +1,7 @@
 import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
 
-xls = pd.ExcelFile("sample_data.xlsx")
+xls = pd.ExcelFile("data\sample_data.xlsx")
 correlation_input_df = pd.read_excel(xls, 'Correlation Input Sheet', parse_dates=['Period'], index_col='Period')
 
 
@@ -59,9 +59,12 @@ def arima_forecast(dataframe, year, p=0, d=1, q=0):
     model = ARIMA(history, order=(0, 0, 0))
     model_fit = model.fit()
 
-    y_hat = model_fit.forecast()[0]
-
-    print('For Year %d --> Predicted = %.3f' % (year, y_hat))
+    y_hat_list = []
+    for i in range(len(history)):
+        y_hat = model_fit.forecast()[i] 
+        y_hat_list.append(y_hat)
+        print('For Year %d --> Predicted = %.3f' % (year, y_hat))
+    
 
 
 
