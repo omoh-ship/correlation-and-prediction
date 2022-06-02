@@ -14,7 +14,7 @@ app = Dash(__name__)
 
 
 
-year_dropdown = dcc.Dropdown(id='year', value=2003, clearable=False,
+year_dropdown = dcc.Dropdown(id='year', value=2011, clearable=False,
             options=dropdown_options(correlation_input_df, 'Period'))
 
 indicator_options = dropdown_options(correlation_input_df, 'Indicator')
@@ -44,7 +44,7 @@ def cb(year, indicators):
                         new_columns='Indicator',
                         new_values='Value',
                         values_to_see=indicators)
-    return px.imshow(data_frame)
+    return px.imshow(data_frame, color_continuous_scale='viridis')
 
 
 if __name__ == "__main__":
