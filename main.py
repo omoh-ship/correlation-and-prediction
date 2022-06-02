@@ -6,7 +6,7 @@ from pandas import DataFrame
 
 
 def dropdown_options(data_frame:DataFrame, query:str) -> list:
-    options = [{'label': year, 'value':year} for year in data_frame[query].unique()]
+    options = [{'label': item, 'value':item} for item in data_frame[query].unique()]
     return options
 
 
@@ -16,24 +16,34 @@ app = Dash(__name__)
 
 year_dropdown = dcc.Dropdown(id='year', value=2003, clearable=False,
             options=dropdown_options(correlation_input_df, 'Period'))
+
+indicator_options = dropdown_options(correlation_input_df, 'Indicator')
+# print(indicator_options)
+indicator_selector = dcc.Dropdown(id='indicators', options=indicator_options,
+                 multi=True, value=[indicator_options[0]['value'], indicator_options[1]['value']])
 graph = dcc.Graph(id='graph', figure={})
 
 
 app.layout = html.Div(children=[
     year_dropdown,
+    indicator_selector,
     graph
 ])
 
 
-@app.callback(Output('graph', 'figure'), Input('year', 'value'))
-def cb(year):
+@app.callback(
+    Output('graph', 'figure'), 
+    Input('year', 'value'), 
+    Input('indicators', 'value'))
+def cb(year, indicators):
     data_frame = correlation_operations(table=correlation_input_df, 
                         query_element='Period',
                         query_value=year,
                         columns_to_drop=['Source', 'Period', 'LGA'],
                         new_index_column='State',
                         new_columns='Indicator',
-                        new_values='Value')
+                        new_values='Value',
+                        values_to_see=indicators)
     return px.imshow(data_frame)
 
 

@@ -18,7 +18,8 @@ class DataFrameFormatter:
         """
         query_result = self.data_frame[self.data_frame[query_elem] == query]
         # make a copy of the slice of the dataframe that has the query
-        query_result = query_result.copy()
+        # query_result = query_result.copy()
+        query_result = query_result
         yield query_result
 
     def analysis_prep(self, analysis_table:pd.DataFrame, column_names:list):
@@ -43,8 +44,8 @@ class DataFrameFormatter:
             new_index: the new index column you'd like the dataframe to have
             new_values: the new values you'd like the dataframe to have
         """
-        reshaped_table = data_frame.pivot(index=new_index, columns=new_columns, values=new_values)
-        print(reshaped_table)
+        reshaped_table = data_frame.pivot_table(index=new_index, columns=new_columns, values=new_values, aggfunc='sum')
+        # print(reshaped_table)
         yield reshaped_table
 
 
