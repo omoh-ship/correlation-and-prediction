@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-class ColumnFormatter:
+class  ColumnFormatter:
     
     def __init__(self, column:pd.Series):
         self.column = column

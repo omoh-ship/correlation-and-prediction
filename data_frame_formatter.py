@@ -6,20 +6,36 @@ class DataFrameFormatter:
     def __init__(self, data_frame:pd.DataFrame):
         self.data_frame = data_frame
 
-    def query_table(self, query_elem:str, query):
+    def filter_with_list(self, query_elem:str, query:list):
         """
-        Queries the table using the parameters passed in 
-        e.g, data_frame=correlation_input_df,query_elem='Period', query=2001. 
-        Therefore correlation_input_df['Period]
+        Much lik the query_table method, this method makes queries to a table
+        but for a list of queries instead of a single one.
+        e.g, data_frame=correlation_input_df,query_elem='Source', query=['NHMIS', 'IHME']. 
+        Therefore correlation_input_df[correlation_input_df['Source'].isin(['NHMIS', 'IHME'])]
         Args: 
             query_elem: the column in the table whose chosen value the table
                         will be filtered by.
             query: the value you want to filter the table with.
         """
-        query_result = self.data_frame[self.data_frame[query_elem] == query]
+        source_filter = self.data_frame[self.data_frame[query_elem].isin(query)]
         # make a copy of the slice of the dataframe that has the query
-        # query_result = query_result.copy()
-        query_result = query_result
+        source_filter = source_filter.copy()
+        # query_result = query_result
+        yield source_filter
+
+    def query_table(self, query_elem:str, query, data_frame:pd.DataFrame ):
+        """
+        Queries the table using the parameters passed in 
+        e.g, data_frame=correlation_input_df,query_elem='Period', query=2001. 
+        Therefore correlation_input_df[correlation_input_df['Period'] == 2001]
+        Args: 
+            query_elem: the column in the table whose chosen value the table
+                        will be filtered by.
+            query: the value you want to filter the table with.
+        """
+        # filtered_sources = self.data_frame[self.data_frame]
+        query_result = data_frame[data_frame[query_elem] == query]
+        # make a copy of the slice of the dataframe that has the query
         yield query_result
 
     def analysis_prep(self, analysis_table:pd.DataFrame, column_names:list):
@@ -47,6 +63,4 @@ class DataFrameFormatter:
         reshaped_table = data_frame.pivot_table(index=new_index, columns=new_columns, values=new_values, aggfunc='sum')
         # print(reshaped_table)
         yield reshaped_table
-
-
 

@@ -13,18 +13,25 @@ def dropdown_options(data_frame:DataFrame, query:str) -> list:
 app = Dash(__name__)
 
 
+source_options = dropdown_options(correlation_input_df, 'Source')
+# print(source_options)
+
+source_selector = dcc.Dropdown(id='source', options=source_options,
+                value=source_options[0]['value'])
 
 year_dropdown = dcc.Dropdown(id='year', value=2011, clearable=False,
             options=dropdown_options(correlation_input_df, 'Period'))
 
 indicator_options = dropdown_options(correlation_input_df, 'Indicator')
 # print(indicator_options)
+
 indicator_selector = dcc.Dropdown(id='indicators', options=indicator_options,
                  multi=True, value=[indicator_options[0]['value'], indicator_options[1]['value']])
 graph = dcc.Graph(id='graph', figure={})
 
 
 app.layout = html.Div(children=[
+    source_selector,
     year_dropdown,
     indicator_selector,
     graph
@@ -33,9 +40,10 @@ app.layout = html.Div(children=[
 
 @app.callback(
     Output('graph', 'figure'), 
+    Input('source', 'value'),
     Input('year', 'value'), 
     Input('indicators', 'value'))
-def cb(year, indicators):
+def cb(source, year, indicators):
     data_frame = correlation_operations(table=correlation_input_df, 
                         query_element='Period',
                         query_value=year,
@@ -43,7 +51,9 @@ def cb(year, indicators):
                         new_index_column='State',
                         new_columns='Indicator',
                         new_values='Value',
-                        values_to_see=indicators)
+                        values_to_see=indicators,
+                        source_query=['NHMIS'],
+                        source='Source')
     return px.imshow(data_frame, color_continuous_scale='viridis')
 
 
