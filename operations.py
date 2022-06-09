@@ -41,40 +41,40 @@ def correlation_operations(table:pd.DataFrame, query_element:str,
     result = pd.concat(result)
     print(f"Table successfully filtered with query:{result}\n\n")
 
-    # # drop useless columns
-    # refined_df = correlation_input_df_formatter.analysis_prep(analysis_table=result, column_names=columns_to_drop)
-    # refined_result = [item for item in refined_df]
-    # refined_df = pd.concat(refined_result)
-    # # print(f"Table successfully dropped columns not needed\n{refined_df}\n\n")
+    # drop useless columns
+    refined_df = correlation_input_df_formatter.analysis_prep(analysis_table=result, column_names=columns_to_drop)
+    refined_result = [item for item in refined_df]
+    refined_df = pd.concat(refined_result)
+    # print(f"Table successfully dropped columns not needed\n{refined_df}\n\n")
 
-    # # filter table for the indicators you want to see on the heatmap
-    # new_indicator_table = refined_df[refined_df[new_columns].isin(values_to_see)]
-    # # print(new_indicator_table)
+    # filter table for the indicators you want to see on the heatmap
+    new_indicator_table = refined_df[refined_df[new_columns].isin(values_to_see)]
+    # print(new_indicator_table)
 
-    # #enumerate items in the desired new index column
-    # column_formatter = ColumnFormatter(new_indicator_table[new_index_column])
-    # target_map = column_formatter.enumerate_column()
-    # # print(f"New index column successfully enumerated\n\n")
+    #enumerate items in the desired new index column
+    column_formatter = ColumnFormatter(new_indicator_table[new_index_column])
+    target_map = column_formatter.enumerate_column()
+    # print(f"New index column successfully enumerated\n\n")
 
-    # # replace current values in the column with their maped enumerated equivalent(it prints a confirmation message if successful)
-    # column_formatter.replace_column_values(target_map=target_map)
+    # replace current values in the column with their maped enumerated equivalent(it prints a confirmation message if successful)
+    column_formatter.replace_column_values(target_map=target_map)
 
-    # # reshape the table
-    # reshaped_table = correlation_input_df_formatter.reshape_table(data_frame=new_indicator_table, 
-    #                                                                 new_columns=new_columns,
-    #                                                                 new_index=new_index_column, 
-    #                                                                 new_values=new_values)
-    # result = [item for item in reshaped_table]
-    # reshaped_table = pd.concat(result)
+    # reshape the table
+    reshaped_table = correlation_input_df_formatter.reshape_table(data_frame=new_indicator_table, 
+                                                                    new_columns=new_columns,
+                                                                    new_index=new_index_column, 
+                                                                    new_values=new_values)
+    result = [item for item in reshaped_table]
+    reshaped_table = pd.concat(result)
     
 
-    # # fill NaN values with 0
-    # reshaped_table = reshaped_table.fillna(0)
-    # # print(reshaped_table)
+    # fill NaN values with 0
+    reshaped_table = reshaped_table.fillna(0)
+    # print(reshaped_table)
 
-    # reshaped_corr = reshaped_table.corr()
-    # # print(reshaped_corr.to_dict())
-    # return reshaped_corr
+    reshaped_corr = reshaped_table.corr()
+    # print(reshaped_corr.to_dict())
+    return reshaped_corr
     
 
 correlation_operations(table=correlation_input_df, 
