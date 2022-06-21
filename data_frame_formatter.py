@@ -6,7 +6,7 @@ class DataFrameFormatter:
     def __init__(self, data_frame:pd.DataFrame):
         self.data_frame = data_frame
 
-    def filter_with_list(self, query_elem:str, query:list):
+    def filter_with_list(self, query_elem: str, query: list):
         """
         Much lik the query_table method, this method makes queries to a table
         but for a list of queries instead of a single one.
@@ -60,7 +60,9 @@ class DataFrameFormatter:
             new_index: the new index column you'd like the dataframe to have
             new_values: the new values you'd like the dataframe to have
         """
-        reshaped_table = data_frame.pivot_table(index=new_index, columns=new_columns, values=new_values, aggfunc='sum')
+        # reshaped_table = data_frame.pivot_table(index=new_index, columns=new_columns, values=new_values, aggfunc='sum')
+        reshaped_table = data_frame.pivot(index=new_index, columns=new_columns, values=new_values)
+
         # print(reshaped_table)
         yield reshaped_table
 
