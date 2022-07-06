@@ -2,9 +2,9 @@ import pandas as pd
 from data_frame_formatter import DataFrameFormatter
 from column_formatter import ColumnFormatter
 
-# xls = pd.ExcelFile("data/msdat_data.xlsx")
-
-correlation_input_df = pd.read_excel('data/msdat_data.xlsx')
+xls = pd.ExcelFile("data/sample_data.xlsx")
+correlation_input_df = pd.read_excel(xls, "Correlation Input Sheet")
+# correlation_input_df = pd.read_excel('data/msdat_data.xlsx')
 
 
 def prep_data(query_element: str, query_value, columns_to_drop: list,
@@ -102,7 +102,8 @@ def correlation_operations(query_elem: str,
     # print(reshaped_table)
 
     reshaped_corr = reshaped_table.corr()
-    # print(reshaped_corr.to_dict())
+    # reshaped_table = reshaped_table.fillna(0)
+    print(reshaped_corr)
     yield reshaped_corr
 
 
@@ -155,24 +156,24 @@ correlation_formatter = DataFrameFormatter(correlation_input_df)
 scatter_formatter = DataFrameFormatter(correlation_input_df)
 
 if __name__ == "__main__":
-    scatter_operations(query_elem='Period',
-                       query_value=2015,
-                       columns_to_drop=['Source', 'Period', 'LGA'],
-                       source_query=['NHMIS'],
-                       source='Source',
-                       formatter=scatter_formatter,
-                       vertical='Maternal Mortality Ratio',
-                       horizontal='Infant Mortality rate',
-                       column_name='Indicator'
-                       )
+    # scatter_operations(query_elem='Period',
+    #                    query_value=2017,
+    #                    columns_to_drop=['Source', 'Period', 'LGA'],
+    #                    source_query=['IHME'],
+    #                    source='Source',
+    #                    formatter=scatter_formatter,
+    #                    vertical='Maternal Mortality Ratio',
+    #                    horizontal='Infant Mortality rate',
+    #                    column_name='Indicator'
+    #                    )
 
-    # correlation_operations(query_elem='Period',
-    #                        query_value=2015,
-    #                        columns_to_drop=['Source', 'Period', 'LGA'],
-    #                        source_query=['NHMIS'],
-    #                        source='Source',
-    #                        values_to_see=['Infant Mortality rate'],
-    #                        new_values='Value',
-    #                        new_columns='Indicator',
-    #                        new_index_column='State',
-    #                        correlation_input_df_formatter=correlation_formatter)
+    correlation_operations(query_elem='Period',
+                           query_value=1990,
+                           columns_to_drop=['Source', 'Period', 'LGA'],
+                           source_query=['IHME'],
+                           source='Source',
+                           values_to_see=['Infant Mortality rate'],
+                           new_values='Value',
+                           new_columns='Indicator',
+                           new_index_column='State',
+                           correlation_input_df_formatter=correlation_formatter)

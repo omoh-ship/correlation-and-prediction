@@ -20,10 +20,16 @@ def dropdown_options(data_frame: pd.DataFrame, query: str) -> list:
 
 app = Dash(__name__)
 
+source_label = html.Label(['Select a Source'],
+                          style={'font-weight': 'bold', "text-align": "right", "offset": 1})
+
 source_options = dropdown_options(correlation_input_df, 'Source')
 
 source_selector = dcc.Dropdown(id='source', options=source_options,
                                value=source_options[0]['value'])
+
+year_label = html.Label(['Select a Year'],
+                        style={'font-weight': 'bold', "text-align": "right", "offset": 1})
 
 year_dropdown = dcc.Dropdown(id='year', value=2017, clearable=False,
                              options=dropdown_options(correlation_input_df, 'Period'))
@@ -44,7 +50,9 @@ horizontal_indicator_selector = dcc.Dropdown(id='horizontal', options=indicator_
 graph = dcc.Graph(id='graph', figure={})
 
 app.layout = html.Div(children=[
+    source_label,
     source_selector,
+    year_label,
     year_dropdown,
     horizontal_selector_label,
     horizontal_indicator_selector,
@@ -75,7 +83,14 @@ def cb(source, year, vertical, horizontal):
     df = pd.concat(df)
     # return px.imshow(df)
     # return px.scatter(df, x=horizontal, y=vertical)
-    if df.empty:
+    x = horizontal
+    y = vertical
+
+    if horizontal and vertical in df.columns:
+        # can't add size to the points since table was reshaped to have the 2 indicators that will be plotted
+        return px.scatter(df, x=x, y=y, trendline='ols', color='State', trendline_scope="overall")
+    # if df.empty:
+    else:
         print("Dataframe is empty")
         return {
             "layout": {
@@ -98,8 +113,6 @@ def cb(source, year, vertical, horizontal):
                 ]
             }
         }
-
-    return px.scatter(df, x=horizontal, y=vertical, trendline='ols', color='State', trendline_scope="overall")
 
 
 if __name__ == "__main__":

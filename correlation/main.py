@@ -61,31 +61,34 @@ def cb(source, year, indicators):
                                         source='Source',
                                         correlation_input_df_formatter=correlation_formatter)
     data_frame = [item for item in data_frame]
+    print(data_frame)
     data_frame = pd.concat(data_frame)
-    if data_frame.empty:
-        print("Dataframe is empty")
-        return {
-            "layout": {
-                "xaxis": {
-                    "visible": False
-                },
-                "yaxis": {
-                    "visible": False
-                },
-                "annotations": [
-                    {
-                        "text": "No matching data found",
-                        "xref": "paper",
-                        "yref": "paper",
-                        "showarrow": False,
-                        "font": {
-                            "size": 28
-                        }
+    if not data_frame.empty:
+        print(data_frame)
+        return px.imshow(data_frame, color_continuous_scale='viridis')
+
+    print("Dataframe is empty")
+    return {
+        "layout": {
+            "xaxis": {
+                "visible": False
+            },
+            "yaxis": {
+                "visible": False
+            },
+            "annotations": [
+                {
+                    "text": "No matching data found",
+                    "xref": "paper",
+                    "yref": "paper",
+                    "showarrow": False,
+                    "font": {
+                        "size": 28
                     }
-                ]
-            }
+                }
+            ]
         }
-    return px.imshow(data_frame, color_continuous_scale='viridis')
+    }
 
 
 if __name__ == "__main__":

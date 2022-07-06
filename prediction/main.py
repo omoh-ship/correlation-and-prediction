@@ -21,13 +21,25 @@ def dropdown_options(data_frame: pd.DataFrame, query: str) -> list:
 
 app = Dash(__name__)
 
+source_label = html.Label(['Select a Source'],
+                          style={'font-weight': 'bold', "text-align": "right", "offset": 1})
+
 source_options = dropdown_options(CORRELATION_INPUT_DF, 'Source')
 
 source_selector = dcc.Dropdown(id='source', options=source_options,
                                value=source_options[0]['value'])
 
+state_label = html.Label(['Select a State'],
+                         style={'font-weight': 'bold', "text-align": "right", "offset": 1})
+
+state_options = dropdown_options(CORRELATION_INPUT_DF, 'State')
+
+state_selector = dcc.Dropdown(id='state', options=state_options,
+                              value=state_options[0]['value'])
+indicator_label = html.Label(['Select an Indicator'],
+                                       style={'font-weight': 'bold', "text-align": "right", "offset": 1})
+
 indicator_options = dropdown_options(CORRELATION_INPUT_DF, 'Indicator')
-# print(indicator_options)
 
 indicator_selector = dcc.Dropdown(id='indicator', options=indicator_options,
                                   value=indicator_options[0]['value'])
@@ -35,7 +47,6 @@ indicator_selector = dcc.Dropdown(id='indicator', options=indicator_options,
 # make this a multi selectable dropdown list starting from 2018
 year_selector = dcc.RangeSlider(id='year', min=2018, max=2026,
                                 value=[2018, 2023],
-                                # value=[2018],
                                 step=1,
                                 tooltip={'always_visible': True, 'placement': 'bottom'}
                                 )
@@ -43,7 +54,11 @@ year_selector = dcc.RangeSlider(id='year', min=2018, max=2026,
 graph = dcc.Graph(id='graph', figure={})
 
 app.layout = html.Div(children=[
+    source_label,
     source_selector,
+    state_label,
+    state_selector,
+    indicator_label,
     indicator_selector,
     year_selector,
     graph
@@ -53,16 +68,18 @@ app.layout = html.Div(children=[
 @app.callback(
     Output('graph', 'figure'),
     Input('source', 'value'),
+    Input('state', 'value'),
     Input('indicator', 'value'),
     Input('year', 'value')
 )
-def cb(source, indicator, year):
+def cb(source, state, indicator, year):
+    # make a list of the year range selected so you can pass it into the prediction operation
     years = [i + 1 for i in range(year[0] - 1, year[-1])]
     df = prediction_operation(dataframe=CORRELATION_INPUT_DF,
                               indicator_column='Indicator',
                               indicator_query=indicator,
                               state_column='State',
-                              state_query='National',
+                              state_query=state,
                               source_column='Source',
                               source_query=source,
                               columns_to_drop=['Indicator', 'State', 'LGA', 'Source'],
@@ -70,10 +87,8 @@ def cb(source, indicator, year):
                               values_column='Value',
                               forecast_years=years
                               )
-    print("Helllooooooo")
     df = [item for item in df]
-    print(df)
-    if df is None:
+    if not df:
         print("Dataframe is empty")
         return {
             "layout": {

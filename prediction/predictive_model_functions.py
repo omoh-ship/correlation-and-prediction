@@ -149,5 +149,113 @@ def sheet_splitter(example_sheet, query_column, query):
         yield result_df
 
     else:
-        return f"""{query_column} : {query} with length: {len(result_df)}, cannot be forecast, choose another indicator or check spelling"""
+        print(f"""{query_column} : {query} with length: {len(result_df)}, cannot be forecast, choose another indicator or check spelling""")
+        return None
+
+
+def is_empty(output):
+    """
+    Checks that the list passed in is not empty.
+    Args:
+        output: the list to be evaluated.
+
+    """
+    if not output:
+        return True
+    return False
+
+
+def generator_reader(generated_list):
+    """
+    Reads the generated list and produces a df.
+    Args:
+        generated_list:
+
+    """
+    resulting_df = [item for item in generated_list]
+
+    # if resulting_df:
+    resulting_df = pd.concat(resulting_df)
+    return resulting_df
+    # else:
+        # print("\nThe query has no results\n")
+
+
+def filter_df(dataframe: pd.DataFrame, indicator_column: str,
+              indicator_query: str, state_column: str, state_query: str,
+              source_column: str, source_query: str):
+    """
+    Filters the dataframe by preferred source, indicator and state.
+    Args:
+        dataframe: dataframe to be filtered.
+        indicator_column: the name of the column with the indicators.
+        indicator_query: the indicator to filter the indicator_column by.
+        state_column: the name of the column with the states.
+        state_query: the state to filter the state_column by.
+        source_column: the name of the column with the data sources.
+        source_query: the source to filter the source_column by.
+    Returns:
+        a generator.
+    """
+    # filter by source
+    correlation_df = sheet_splitter(dataframe, source_column, source_query)
+    correlation_df = [item for item in correlation_df]
+
+    # checks if the list containing the df is empty
+    if is_empty(correlation_df):
+        # returns None if it is
+        return correlation_df
+    correlation_df = pd.concat(correlation_df)
+
+    # use the df already filtered by source to filter by indicator
+    correlation_df = sheet_splitter(correlation_df, indicator_column, indicator_query)
+    correlation_df = [item for item in correlation_df]
+    if is_empty(correlation_df):
+        return correlation_df
+    correlation_df = pd.concat(correlation_df)
+
+    # use the df already filtered by indicator to filter by state
+    correlation_df = sheet_splitter(correlation_df, state_column, state_query)
+    correlation_df = [item for item in correlation_df]
+
+    return correlation_df
+
+
+def column_dropper(data_frame: pd.DataFrame, drop_cols):
+    """
+    Drops columns passed in from the dataframe passed in.
+    Args:
+        data_frame: data frame columns are to be dropped from.
+        drop_cols: colums to be dropped from the dataframe.
+    Returns:
+        a generator
+    """
+    yield data_frame.drop(drop_cols, axis=1)
+
+
+def date_time_converter(column):
+    """
+    Converts a column to a pandas date time object (not a regular date time object)
+    Args:
+        column: column to be converted.
+    Returns:
+        a generator
+
+    """
+    return pd.to_datetime(column, format='%Y')
+
+
+def index_setter(df, new_index_column):
+    """
+    Reset the index of the dataframe and fill nan values after reset
+    Args:
+        df: the dataframe to be reset.
+        new_index_column:  the new index column after the reset.
+    Returns:
+        a generator
+    """
+    df = df.set_index(new_index_column, drop=True, append=False, inplace=False,
+                      verify_integrity=False)
+    # fill nan values with preceeding values
+    yield df.fillna(method='ffill')
 
